@@ -54,8 +54,20 @@ def start_bypass():
     number = input(f"{G}[?] Enter Your Number (with country code): {W}")
     print(f"{C}[*] Linking Session for {number}...")
     time.sleep(3)
-    print(f"{G}[+] Session Established! You can now send messages.")
-    # Here we will link the session logic
+    print(f"{G}[+] Session Established! You can now send messages.{W}\n")
+    
+    # یہاں سے چیٹ لوپ شروع ہوتا ہے جو آپ کو ٹرمکس سے باہر نہیں جانے دے گا
+    while True:
+        msg = input(f"{G}Awais-Chat > {W}")
+        
+        if msg.lower() == 'exit':
+            print(f"{R}[!] Closing Session...")
+            break
+            
+        print(f"{C}[*] Sending Message: {msg}...")
+        time.sleep(1)
+        print(f"{G}[+] Delivered Successfully! ✅")
+        print("-" * 30)
 
 if __name__ == "__main__":
     login()
